@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8E8FF"
+    android:padding="16dp">
+
+    <!-- Top bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#D1C4E9">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back Button" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Search..."/>
+
+        <!-- Microphone Icon -->
+        <ImageButton
+            android:id="@+id/microphoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Search with Voice" />
+
+        <!-- QR Code Scanner -->
+        <ImageButton
+            android:id="@+id/scannerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Scan QR Code" />
+    </LinearLayout>
+
+    <!-- Cart Search and Filter -->
+
+    <LinearLayout
+        android:id="@+id/cart_search_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+<!--        <EditText-->
+<!--            android:id="@+id/searchCart"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:hint="Search Cart"-->
+<!--            android:padding="8dp" />-->
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cart_search_filter"
+        android:layout_marginTop="38dp"
+        android:orientation="vertical"
+        android:paddingTop="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatTile1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="18dp">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="18dp"
+                android:src="@drawable/bag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Armani Bag"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/date1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$40.00"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/message1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="Easy to use everyday for..."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image1"
+                app:layout_constraintTop_toBottomOf="@id/name1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatTile2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="18dp">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/fan"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Table fan"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/date2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$56.00"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/message2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Less energy consuming..."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image2"
+                app:layout_constraintTop_toBottomOf="@id/name2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chatTile3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/shoe"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Nike Shoe"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/date3"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$32.00"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/message3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="Comfortable and sporty..."
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/image3"
+                app:layout_constraintTop_toBottomOf="@id/name3" />
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="@android:color/darker_gray"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                tools:layout_editor_absoluteY="76dp" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_list"
+        android:layout_marginTop="12dp"
+        android:text="Total: $128.00"
+        android:textSize="18sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/rec"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/totalPrice"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="RECOMMENDATIONS:"-->
+<!--        android:textSize="18sp" />-->
+
+    <LinearLayout
+        android:id="@+id/recommended_section"
+        android:layout_width="395dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/cart_search_filter"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:paddingTop="16dp">
+
+        <!-- Recommended Product W -->
+        <LinearLayout
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="16dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="74dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/table" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="16dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="81dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/laptop" />-->
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="16dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="54dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/sandals" />-->
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="16dp">
+
+<!--            <ImageView-->
+<!--                android:layout_width="68dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:src="@drawable/pen" />-->
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/checkoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recommended_section"
+        android:layout_marginTop="307dp"
+        android:background="#D1C4E9"
+        android:padding="16dp"
+        android:text="Checkout"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="#E1C6F1">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🏠" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👤" />
+
+        <Button
+            android:id="@+id/walletNavButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👛" />
+
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="🛒" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="≡" />
+    </LinearLayout>
+
+</RelativeLayout>

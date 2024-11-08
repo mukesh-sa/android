@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8E8FF"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:background="#E1C6F1">
+
+        <!-- Back Button -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Back Button" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="Search..."/>
+
+        <!-- Microphone Icon -->
+        <ImageButton
+            android:id="@+id/microphoneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Search with Voice" />
+
+        <!-- QR Code Scanner -->
+        <ImageButton
+            android:id="@+id/scannerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="Scan QR Code" />
+    </LinearLayout>
+
+    <!-- Order Summary Section -->
+    <TextView
+        android:id="@+id/orderSummaryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="20dp"
+        android:text="Order Summary"
+        android:textSize="18sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/orderDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderSummaryTitle"
+        android:layout_marginTop="10dp"
+        android:text="Order 1: $15.00\nOrder 2: $10.00\nOrder 3: $20.00"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderDetails"
+        android:layout_marginTop="10dp"
+        android:text="Total: $45.00"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Tax and Shipment Section -->
+    <TextView
+        android:id="@+id/taxAndShipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/total"
+        android:layout_marginTop="10dp"
+        android:text="Tax: $5.00\nShipment: $5.00"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Address Field -->
+    <EditText
+        android:id="@+id/addressField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taxAndShipment"
+        android:hint="Address: xx/xx, abc..."
+        android:textColor="#000"/>
+
+    <!-- Offers Section -->
+    <Button
+        android:id="@+id/addOfferButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addressField"
+        android:layout_marginTop="10dp"
+        android:text="Add Offer Code"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/offerDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addOfferButton"
+        android:layout_marginTop="10dp"
+        android:text="- $0.00"
+        android:textSize="16sp"
+        android:textColor="#FF0000" />
+
+    <!-- Grand Total Section -->
+    <TextView
+        android:id="@+id/grandTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/offerDiscount"
+        android:layout_marginTop="10dp"
+        android:text="Grand Total: $55.00"
+        android:textSize="16sp"
+        android:textColor="#000" />
+
+    <!-- Payment Mode Section -->
+
+    <TextView
+        android:id="@+id/Payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grandTotal"
+        android:layout_marginTop="62dp"
+        android:text="PAYMENT MODES:"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/paymentMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Payment"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <Button
+            android:id="@+id/walletButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Wallet" />
+
+        <Button
+            android:id="@+id/cardButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Card" />
+
+        <Button
+            android:id="@+id/upiButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="UPI" />
+
+        <Button
+            android:id="@+id/bankButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Bank" />
+    </LinearLayout>
+
+    <!-- Proceed Button -->
+
+    <!-- Bottom Navigation Bar -->
+    <Button
+        android:id="@+id/proceedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/paymentMode"
+        android:layout_marginTop="90dp"
+        android:backgroundTint="#E1C6F1"
+        android:text="Proceed"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:background="#E1C6F1">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="🏠"
+            android:onClick="onHome" />
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👤"
+            android:onClick="onProfile"/>
+
+        <Button
+            android:id="@+id/walletNavButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="👛"
+            android:onClick="onWallet" />
+
+        <Button
+            android:id="@+id/cartButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="🛒"
+            android:onClick="onCart" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="≡" />
+    </LinearLayout>
+
+</RelativeLayout>

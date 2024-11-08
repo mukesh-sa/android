@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    android:padding="10dp">
+
+    <!-- Top search bar -->
+    <LinearLayout
+        android:id="@+id/top_search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/search_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Search" />
+
+        <TextView
+            android:id="@+id/microphone_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎤"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Microphone" />
+
+        <TextView
+            android:id="@+id/scan_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Scan" />
+
+    </LinearLayout>
+
+    <!-- ORDERS title -->
+    <TextView
+        android:id="@+id/orders_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_search_bar"
+        android:text="ORDERS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Search orders bar -->
+    <LinearLayout
+        android:id="@+id/search_orders_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orders_title"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <EditText
+            android:id="@+id/search_orders_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search Orders"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🗂️"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Filter" />
+
+        <TextView
+            android:id="@+id/search_orders_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔍"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Search" />
+
+        <TextView
+            android:id="@+id/microphone_orders_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎤"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:contentDescription="Microphone" />
+
+    </LinearLayout>
+
+    <!-- Order again section -->
+    <LinearLayout
+        android:id="@+id/order_again_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_orders_bar"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Again"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/product1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Product 1"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/product2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Product 2"
+                android:padding="10dp" />
+
+            <Button
+                android:id="@+id/product3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📦 Product 3"
+                android:padding="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Recent orders section -->
+    <LinearLayout
+        android:id="@+id/recent_orders_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_again_section"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Recent Orders"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recent_order1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍎 Apple - Delivered Oct 20"
+                android:background="@android:color/darker_gray"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recent_order2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧴 Lotion - Delivered Oct 18"
+                android:background="@android:color/darker_gray"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recent_order3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🖨️ Printer - Delivered Oct 15"
+                android:background="@android:color/darker_gray"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/recent_order4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👟 Sneakers - Delivered Oct 12"
+                android:background="@android:color/darker_gray"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Bottom navigation bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/home_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🏠"
+            android:contentDescription="Home" />
+
+        <TextView
+            android:id="@+id/orders_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="🛒"
+            android:contentDescription="Orders" />
+
+        <TextView
+            android:id="@+id/account_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="👤"
+            android:contentDescription="Account" />
+
+        <TextView
+            android:id="@+id/wishlist_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="💖"
+            android:contentDescription="Wishlist" />
+
+    </LinearLayout>
+
+</RelativeLayout>

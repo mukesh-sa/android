@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@color/primary_color"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="←"
+            android:textColor="#000000"
+            android:background="@android:color/transparent"
+            android:layout_marginEnd="10dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/search_input"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Search"
+                android:padding="8dp"
+                android:background="@drawable/edit_text_background"
+                android:inputType="text"/>
+
+            <Button
+                android:id="@+id/mic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🎤"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Profile Section -->
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_bar"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:id="@+id/profile_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="PROFILE"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/cr7"/>
+        <!-- Replace with your drawable -->
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_shape" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Cristiano Ronaldo"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/edit_profile_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#5D7B6F"
+                android:padding="15dp"
+                android:text="Edit Profile"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/shopping_address_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="#5D7B6F"
+                android:padding="15dp"
+                android:text="Shipping Address"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/cartt_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/primary_color"
+                android:padding="15dp"
+                android:text="Cart"
+                android:textColor="#000000" />
+
+            <Button
+                android:id="@+id/change_password_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/primary_color"
+                android:padding="15dp"
+                android:text="Change Password"
+                android:textColor="#000000"
+                android:onClick="onForgot" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_color"
+            android:padding="15dp"
+            android:text="LOGOUT"
+            android:textColor="#000000"
+            android:onClick="onLogout" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_color"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/home_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="🏠"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="👤" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="💰"
+                android:onClick="onButton2Click" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wallet"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/cart_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="🛒"
+                android:onClick="onButton5Click" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="☰" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

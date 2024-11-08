@@ -1,0 +1,48 @@
+<resources>
+<!--    <string name="app_name">ecomapp</string>-->
+<!--  App Name  -->
+<string name="app_name">The Ultimate Store</string>
+<!--  Logo Description  -->
+<string name="logo_description">Logo of The Ultimate Store</string>
+<string name="mini_logo_description">Mini logo for The Ultimate Store</string>
+<!--  Add this line  -->
+<!--  Profile Image Description  -->
+<string name="profile_description">User Profile Image</string>
+<!--  Welcome Message  -->
+<string name="welcome_message">Welcome Super-Purchaser!</string>
+<!--  Date and Time Placeholder  -->
+<string name="date_time">Date and Time</string>
+<!--  Login Page  -->
+<string name="login_title">Login</string>
+<string name="enter_name">Enter Name</string>
+<string name="enter_password">Enter Password</string>
+<string name="login_button">Login</string>
+<string name="not_registered">Not a registered UTS User?</string>
+<string name="register_now">Register Now</string>
+<string name="powered_by">Powered by: Muggle-made Technologies v.1</string>
+<!--  Register Page  -->
+<string name="sign_up_title">Sign up to UTS Super-purchasing clan !!</string>
+<string name="enter_phone">Enter Phone Number</string>
+<string name="enter_email">Enter Email ID</string>
+<string name="enter_address">Enter Address</string>
+<string name="enter_city">Enter City/Town</string>
+<string name="enter_nation">Enter Nation</string>
+<string name="enter_pincode">Enter Pincode</string>
+<string name="user_agreement">I agree to the User Agreement and Disclosure</string>
+<string name="accept_button">Accept</string>
+<string name="verify_button">Verify</string>
+<string name="register_button">Register</string>
+<!--  Home Page  -->
+<string name="bestsellers_global">Bestsellers in UTS globally</string>
+<string name="bestsellers_india">Bestsellers in UTS India</string>
+<string name="recent_searches">Your Recent Searches and Purchases</string>
+<string name="todays_offer">Today\'s Offer</string>
+<string name="offer_details">20% off on all stationaries*</string>
+<string name="member_prompt">Become a member of UTS Elite for more such deals!</string>
+<!--  Bottom Navigation  -->
+<string name="home">Home</string>
+<string name="account">Account</string>
+<string name="wallet">Wallet</string>
+<string name="cart">Cart</string>
+<string name="more">More Options</string>
+</resources>

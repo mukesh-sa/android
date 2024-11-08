@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGray">
+
+    <!-- Central Widget -->
+
+    <!-- Rectangle with Text -->
+
+    <!-- Sentence Below -->
+
+    <!-- Dots Indicator -->
+
+    <ImageView
+        android:id="@+id/imageWidget2"
+        android:layout_width="171dp"
+        android:layout_height="345dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/logo_description"
+        android:src="@drawable/splash"
+        app:layout_constraintBottom_toTopOf="@+id/textFairestPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textFairestPrice"
+        android:layout_width="162dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rectangle_background"
+        android:padding="10dp"
+        android:text="Fairest Price"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageWidget2" />
+
+    <TextView
+        android:id="@+id/textDescription2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="We offer the best prices to ensure you get the most value."
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFairestPrice" />
+
+    <LinearLayout
+        android:id="@+id/dotsIndicator2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp">
+
+        <!-- Dots Representation -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dummy"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dummy"
+            android:layout_margin="4dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/dummy"
+            android:layout_margin="4dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

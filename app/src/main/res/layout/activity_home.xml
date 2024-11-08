@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Title Bar -->
+    <LinearLayout
+        android:id="@+id/titleBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/primaryColor"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Mini Logo -->
+        <ImageView
+            android:id="@+id/miniLogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/your_logo"
+            android:contentDescription="@string/mini_logo_description"/>
+
+        <!-- Store Name -->
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/textStoreName"
+            android:layout_width="252dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="THE ULTIMATE STORE"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textDateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 Oct 2024 10:00"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Subtitle Bar -->
+    <LinearLayout
+        android:id="@+id/subtitleBar"
+        android:layout_width="419dp"
+        android:layout_height="66dp"
+        android:background="@color/lightGray"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleBar">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="160dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:text="Welcome Super-purchaser!"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <!-- Profile Image -->
+<!--        <ImageView-->
+<!--            android:id="@+id/imageProfile"-->
+<!--            android:layout_width="54dp"-->
+<!--            android:layout_height="54dp"-->
+<!--            android:background="@drawable/circle_background"-->
+<!--            android:contentDescription="@string/profile_image"-->
+<!--            android:src="@drawable/profile_image" />-->
+    </LinearLayout>
+
+    <!-- Main Content -->
+    <ScrollView
+        android:id="@+id/scrollViewHome"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/subtitleBar"
+        app:layout_constraintBottom_toTopOf="@id/bottomPanel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lightGray"
+            android:padding="16dp">
+
+            <!-- Bestsellers in UTS Globally -->
+            <TextView
+                android:id="@+id/textBestsellersGlobal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestsellers in UTS Globally"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- RecyclerView or Horizontal Scroll for Products -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerBestsellersGlobal"
+                android:layout_width="381dp"
+                android:layout_height="81dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textBestsellersGlobal" />
+
+            <!-- Bestsellers in UTS India -->
+            <TextView
+                android:id="@+id/textBestsellersIndia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestsellers in UTS India"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/recyclerBestsellersGlobal"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Your Recent Searches and Purchases -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerBestsellersIndia"
+                android:layout_width="382dp"
+                android:layout_height="81dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textBestsellersIndia" />
+
+            <TextView
+                android:id="@+id/textRecentSearches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Recent Searches and Purchases"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/recyclerBestsellersIndia"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerRecentSearches"
+                android:layout_width="379dp"
+                android:layout_height="92dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textRecentSearches" />
+
+            <!-- Today's Offer Banner -->
+            <LinearLayout
+                android:id="@+id/todaysOfferBanner"
+                android:layout_width="377dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/offerBackground"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerRecentSearches">
+
+                <TextView
+                    android:id="@+id/textOfferTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today's Offer"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textOfferDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="20% off on all stationaries*"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textBecomeMember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Become a member UTS Elite for more such deals."
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <!-- Bottom Panel with Icons -->
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/lightGray"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Home Icon -->
+        <ImageView
+            android:id="@+id/iconHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/home"
+            android:contentDescription="@string/home"
+            android:background="@color/lightGray"
+            android:padding="8dp"/>
+
+        <!-- Account Icon -->
+        <ImageView
+            android:id="@+id/iconAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_account"
+            android:contentDescription="@string/account"
+            android:background="@color/panelBackground"
+            android:padding="8dp"/>
+
+        <!-- Wallet Icon -->
+        <ImageView
+            android:id="@+id/iconWallet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/wallet"
+            android:contentDescription="@string/wallet"
+            android:background="@color/panelBackground"
+            android:padding="8dp"/>
+
+        <!-- Cart Icon -->
+        <ImageView
+            android:id="@+id/iconCart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cart"
+            android:contentDescription="@string/cart"
+            android:background="@color/panelBackground"
+            android:padding="8dp"/>
+
+        <!-- More Options Icon -->
+        <ImageView
+            android:id="@+id/iconMoreOptions"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more_options"
+            android:contentDescription="@string/more"
+            android:background="@color/panelBackground"
+            android:padding="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

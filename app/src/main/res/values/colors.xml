@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+<color name="background_color">#B0D4B8</color>
+<color name="primary_color">#5D7B6F</color>
+    <color name="primarycolor">#5D7B6F</color>
+<color name="secondary_color">#5D7B6F</color>
+<color name="button_bg">#5D7B6F</color> <!-- Set button background -->
+<color name="button_text_color">#000000</color> <!-- Set button text color -->
+<color name="nav_text_color">#FFFFFF</color> <!-- Navigation text color -->
+<!--<color name="white">#FFFFFF</color>-->
+<!--<color name="black">#000000</color>-->
+<color name="primaryColor">#FF6200EE</color>
+<!--  Your primary color  -->
+<color name="secondaryColor">#FFBB86FC</color>
+<color name="backgroundColor">#F5F5F5</color>
+<color name="textColor">#000000</color>
+<color name="buttonColor">#FF3700B3</color>
+<color name="lightGray">#5D7B6F</color>
+<color name="offerBackground">#808080</color>
+<color name="panelBackground">#5D7B6F</color>
+</resources>

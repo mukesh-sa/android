@@ -1,0 +1,285 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6E6FA"
+    android:padding="10dp">
+
+    <!-- Top search bar -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="4dp">
+
+        <!-- Back button -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_media_previous"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back Button" />
+
+        <!-- Search input -->
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Home decor"
+            android:background="@null"
+            android:padding="10dp" />
+
+        <!-- Microphone button -->
+        <ImageButton
+            android:id="@+id/mic_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Voice Search" />
+
+        <!-- Scanner button -->
+        <ImageButton
+            android:id="@+id/scan_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_camera"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Scan QR" />
+    </LinearLayout>
+
+    <!-- Product grid layout -->
+    <GridLayout
+        android:id="@+id/product_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_marginTop="20dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!-- Product 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:onClick="onButton2Click" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/star_big_on" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product 1\n50+ bought in past month"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:onClick="onButton2Click" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$.$$"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_add"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Product 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:onClick="onButton2Click" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product 2\n20+ bought in past month"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:onClick="onButton2Click" />/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$.$$"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_add"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Product 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:onClick="onButton2Click" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_lock_idle_alarm" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product 3\n70+ bought in past month"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:onClick="onButton2Click" />/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$.$$"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:src="@android:drawable/ic_menu_add"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Product 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:onClick="onButton2Click" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_myplaces" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product 4\n88+ bought in past month"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp"
+                android:onClick="onButton2Click" />/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$$.$$"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_add"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:layout_gravity="center" />
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- Bottom navigation bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_view"
+            android:contentDescription="Home"
+            android:onClick="onHome" />
+
+        <ImageButton
+            android:id="@+id/profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Profile"
+            android:onClick="onProfile" />
+
+        <ImageButton
+            android:id="@+id/wallet_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Wallet"
+            android:onClick="onWallet" />
+
+        <ImageButton
+            android:id="@+id/cart_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_agenda"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Cart"
+            android:onClick="onCart" />
+
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_more"
+            android:layout_marginStart="20dp"
+            android:contentDescription="Menu" />
+    </LinearLayout>
+</RelativeLayout>
